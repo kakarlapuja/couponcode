@@ -1,0 +1,611 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+
+
+}
+
+/* coupon code */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display:none;
+}
+
+.popupBox {
+    position: relative;
+    width: 800px;
+    height: 1000px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    /* box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1); */
+    
+}
+
+.popupBox .imgBx {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.popupBox .imgBx img {
+    position: relative;
+    width: 500px;
+    z-index: 1;
+}
+
+.couponText {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    /* display:flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    color: rgb(108, 41, 218);
+    text-align: center;
+}
+
+.couponText h2 {
+
+    font-size: 3em;
+    ;
+    text-transform: uppercase;
+}
+
+.couponText span {
+    text-transform: uppercase;
+}
+
+.couponText p {
+    font-size: 25px;
+
+}
+
+.couponText h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-style: bold;
+    line-height: 2;
+}
+.couponText a{
+    display:inline-block;
+    padding:10px 20px;
+    text-decoration:none;
+    margin-top:15px;
+    background:rgb(6, 247, 171);
+    color:black;
+    border-radius: 2px;
+}
+.close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    width: 30px;
+    height: 30px;
+    background:#f3f3f3 url(close.png) ;
+    background-repeat: no-repeat;
+    background-size:30px;
+    cursor: pointer;
+    border-radius:50%;
+    z-index:10;
+  
+}
+
+
+
+/* HEADER BAR */
+.head-container {
+    /* height: 70px; */
+    widows: 100%;
+    background-color: #2874f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.logo p {
+
+    color: #fff;
+    position: relative;
+    margin-top: -5px;
+    font-style: oblique;
+    padding-top: 3px;
+}
+
+.logo span {
+    color: yellow;
+    font-weight: 800;
+}
+
+.search {
+
+    background-color: white;
+    padding: 10px;
+    width: 480px;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2874f0;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 1px 1px 1px 1px rgb(37, 34, 34);
+}
+
+.search input {
+    width: 350px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+}
+
+.login button {
+    color: blue;
+    padding: 8px 30px;
+    font-size: 18px;
+    font-weight: 500;
+
+    background-color: #fff;
+    border: 0px;
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.head-link {
+
+    color: #fff;
+    margin: 0px 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.angledownicon i {
+    font-size: 12px;
+}
+
+
+/* PRODUCT LIST */
+.product-category {
+    height: 110px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    /* background-color: var(--secondary-color); */
+    /* color: var(--primary-color); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1px 40px;
+}
+
+.product-category-bar {
+    /* height: 115px; */
+    width: 80px;
+    cursor: pointer;
+    flex: 1;
+    /*headings come at one line*/
+    font-weight: 500;
+}
+
+.product-category-bar img {
+    height: 65px;
+    width: 65px;
+
+}
+
+.product-category-bar:hover p {
+    color: #2874f0;
+    font-weight: 550;
+}
+
+
+/* SECTION1 SLIDER IMGE */
+.slide-container {
+    /* background-color: rgb(241, 230, 230); */
+    /* height: 400px; */
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 20px; */
+    margin: 10px 20px;
+    position: relative;
+}
+
+.slider-wrapping {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider img {
+    height: 240px;
+    width: 100%;
+    transition: all 0.15s ease;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    /* padding:0px; */
+}
+
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid 3px #fff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+
+.dots label:hover {
+    background: blue;
+}
+
+#img1:checked~.slider-1 {
+    margin-left: 0;
+
+}
+
+#img2:checked~.slider-2 {
+
+    margin-left: -100%
+}
+
+#img3:checked~.slider-3 {
+
+    margin-left: -200%;
+
+}
+
+#img4:checked~.slider-4 {
+
+    margin-left: -300%;
+
+}
+
+/* SCETION-2 */
+.topdeals-container {
+    height: 370px;
+    /* margin-top: 20px; */
+    border: 1px solid #ccc;
+    width: 91%;
+    background-color: #fff;
+    /* background-color: var(--secondary-color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 100px;
+    /* margin-right: 20px; */
+}
+
+.back-img {
+    height: 100%;
+
+    width: 20%;
+    background-image: url(https://rukminim1.flixcart.com/fk-p-flap/278/278/image/964e5530abdf3180.jpg?q=90);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*back img size*/
+}
+
+.topdeals {
+    margin-top: 80px;
+    /* width:100%; */
+    font-size: 40px;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.topdeals button {
+    margin-top: 160px;
+    background-color: #2874f0;
+    width: 35%;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    /* box-shadow: 0 2px 4px 0 #fff; */
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.product-list {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+}
+
+.items {
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+
+
+}
+
+.items img {
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    /* opacity: 1; */
+    max-width: 235px;
+    max-height: 330px;
+}
+
+.item-head {
+    /* color: var(--primary-/color); */
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.item-price {
+    margin-top: 12x;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(22, 228, 56);
+}
+
+.item-subhead {
+    /* color: var(--primary-color); */
+    opacity: 0.5;
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+/* SECTION 3 */
+.Best-of-electronics {
+    height: 370px;
+    /* margin-top: 20px; */
+    border: 1px solid #ccc;
+    width: 91%;
+    background-color: #fff;
+    /* background-color: var(--secondary-color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 100px;
+    /* margin-right: 20px; */
+
+}
+
+.electronics-img {
+    height: 100%;
+    width: 20%;
+    background-image: url(https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.electronics {
+    margin-top: 50px;
+    color: #080808;
+    font-size: 40px;
+    font-weight: 550;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.electronics button {
+    margin-top: 125px;
+    background-color: #2874f0;
+    width: 35%;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    /* box-shadow: 0 2px 4px 0 #fff; */
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+
+/* SECTION 4 */
+.Beauty-more {
+    height: 370px;
+    /* margin-top: 5px; */
+    border: 1px solid #ccc;
+    width: 91%;
+    background-color: #fff;
+    /* background-color:var(--secondary-color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 102px;
+    /* margin-right: 20px; */
+    margin-top: 20px;
+
+}
+
+.toy-img {
+    height: 100%;
+    width: 20%;
+    background-image: url(https://rukminim1.flixcart.com/fk-p-flap/278/278/image/b84f1c22cce1a6a3.jpg?q=90);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.Beauty-Toys {
+    margin-top: 50px;
+
+    color: #080808;
+    /* width:100%; */
+    font-size: 40px;
+    font-weight: 550;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.Beauty-Toys button {
+    margin-top: 125px;
+    background-color: #2874f0;
+    width: 35%;
+    height: 40px;
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    box-shadow: 0 2px 4px 0 #fff;
+    cursor: pointer;
+    /* padding:10px 20px; */
+    border-radius: 2px;
+}
+
+.item-head {
+    margin-top: 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.item-price {
+    margin-top: 12x;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(22, 228, 56);
+}
+
+.item-subhead {
+    opacity: 0.6;
+    margin-top: 12px;
+    font-size: 20px;
+
+}
+
+/* FOOTER SCETION */
+hr {
+    opacity: 0.2;
+}
+
+footer {
+    height: 200px;
+    width: 91%;
+    margin-top: 10px;
+    margin-left: 100px;
+    background-color: rgb(39, 32, 32);
+
+    color: white;
+    margin-top: 20px;
+}
+
+.footcontainer {
+
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.foottext {
+    font-size: 20px;
+    margin-top: 50px;
+
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footDiv {
+    margin-top: 20px;
+    margin-left: 20px;
+    /* border-right: 2px solid white; */
+    text-align: center;
+    width: 80%;
+
+}
+
+.footDiv ul li:hover {
+    color: aqua;
+    padding-left: 8px;
+    cursor: pointer;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.social i {
+    /* display: flex; */
+    justify-content: space-between;
+
+}
+
+.social a {
+    display: inline-block;
+    /*to remove dash betweenimages*/
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: grey;
+    margin: 0 10px 10px 0;
+    line-height: 33px;
+    border-radius: 10px;
+
+    color: #ffffff;
+    /* transition: all 0.5s ease; */
+
+}
+
+.social a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+
+
+}
